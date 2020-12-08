@@ -9,7 +9,8 @@
       name="description"
       content="Web site created using create-react-app"
     />
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/javascripts/services.js"></script>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -28,7 +29,34 @@
     <title>React App</title>
   </head>
   <body>
-    
+    <main class="two-col">
+      <section id="operations-container">
+        <h2>Operations:</h2>
+        <div class="scrollbox">
+          <form id="login">
+            <input type="submit" value="login">
+          </form>
+  
+          <form id="callback">
+            <h3>Callback</h3>
+            <input type="submit" value="callback">
+          </form>
+  
+          <form id="token">
+            <h3>Refresh Token</h3>
+            <div>
+              <label for="token">token:</label>
+              <input id="refresh" name="refresh">
+            </div>
+            <input type="submit" value="Get new token">
+          </form>
+        <section>
+          <h2>Response:</h2>
+          <div class="scrollbox">
+            <pre id="response" class="teletype"></pre>
+          </div>
+        </section>
+    </main>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
